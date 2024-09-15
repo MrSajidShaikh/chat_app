@@ -1,4 +1,3 @@
-lutter project.
 
 ## Getting Started
 
