@@ -71,6 +71,3 @@ class HomePage extends StatelessWidget {
     }
   }
 }
-
-Search Google or type a URL
-
