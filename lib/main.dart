@@ -1,30 +1,55 @@
-import 'package:chat_app/Services/Auth/auth_gate.dart';
-import 'package:chat_app/Themes/theme_provider.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+
+import 'Controller/auth_controller.dart';
+import 'Screens/landing_screen.dart';
+import 'Themes/theme.dart';
+import 'Utils/mobile_layout.dart';
+import 'Utils/routes.dart';
+import 'Widgets/error.dart';
+import 'Widgets/loader.dart';
 import 'firebase_options.dart';
 
-Future<void> main() async {
+void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
+
   runApp(
-    ChangeNotifierProvider(
-      create: (context) => ThemeProvider(),
-      child: const MyApp(),
+    const ProviderScope(
+      child: MyApp(),
     ),
   );
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class MyApp extends ConsumerWidget {
+  const MyApp({Key? key}) : super(key: key);
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: const AuthGate(),
-      theme: Provider.of<ThemeProvider>(context).themeData,
+      title: 'Chat App',
+      theme: ChatAppTheme.lightTheme,
+      darkTheme: ChatAppTheme.darkTheme,
+      themeMode: ThemeMode.system,
+      onGenerateRoute: (settings) => generateRoute(settings),
+      home: ref.watch(userDataAuthProvider).when(
+        data: (user) {
+          if (user == null) {
+            return const LandingScreen();
+          }
+          return const MobileLayoutScreen();
+        },
+        error: (err, trace) {
+          return ErrorScreen(
+            error: err.toString(),
+          );
+        },
+        loading: () => const Loader(),
+      ),
     );
   }
 }
