@@ -1,12 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../Controller/auth_controller.dart';
-import '../Controller/call_controller.dart';
 import '../Models/user_model.dart';
 import '../Widgets/bottom_chat_field.dart';
 import '../Widgets/chat_list.dart';
 import '../Widgets/loader.dart';
-import 'call_pickup_screen.dart';
 
 class ChatScreen extends ConsumerWidget {
   static const String routeName = '/mobile-chat-screen';
