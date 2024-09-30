@@ -12,13 +12,9 @@ A feature-rich chat application built using **Flutter** with **Firebase** integr
 - **Contact Import:** Connect with your mobile contacts who are also using the app.
 - **Emojis & GIFs:** Express yourself with a wide range of emojis and share GIFs in your chats.
 - **Image & Video Sharing:** Share images and videos with ease.
-- **Audio Recordings:** Record and send audio messages in chats.
-- **Group Chat:** Create and join group chats with multiple participants.
-- **Video Calling:** Engage in person-to-person or group video calls.
 - **Profile Pictures:** Set your profile picture for others to see.
 - **Online/Offline Status:** Know when your contacts are online or offline.
 - **Real-Time Message Status:** See when messages are sent or received in real-time.
-- **Status Updates:** Share your current status, just like WhatsApp.
 - **Dark & Light Themes:** Choose between dark and light themes for a personalized experience.
 - **Search Functionality:** Easily find and start conversations with your contacts.
 
