@@ -71,7 +71,7 @@ The app leverages a variety of technologies to provide a rich and interactive us
 
 - **Flutter**: The cross-platform framework for building mobile applications.
 
-- **Firebase**: Firebase Authentication, Firebase Storage, and Firestore for user management, storage, and real-time database functionality.
+- **Firebase**: Firebase authentication, Firebase storage, and Firestore are for user management, storage, and real-time database functionality.
 
 - **Agora Video Calling**: Integrated for high-quality video calls, supporting both one-on-one and group video calling.
 
