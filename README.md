@@ -59,7 +59,7 @@ This app serves as a foundation for further development, with future updates exp
 
 - **Message Editing/Deleting**: Users will have the ability to edit or delete messages within a specified timeframe.
 
-- **User Authentication Enhancements**: Implementation of additional authentication methods for enhanced security.
+- **User Authentication Enhancements**: Implement additional authentication methods for enhanced security.
 
 - **Multi-Language Support**: Localization features will be added to accommodate users from different linguistic backgrounds.
 
