@@ -81,4 +81,4 @@ The app leverages a variety of technologies to provide a rich and interactive us
 
 ## Contributions
 
-Contributions are welcome! If you'd like to enhance the app or add new features, feel free to submit a pull request.
+Contributions are welcome! Feel free to submit a pull request if you'd like to enhance the app or add new features.
