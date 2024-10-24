@@ -57,7 +57,7 @@ This app serves as a foundation for further development, with future updates exp
 
 - **Notification Integration**: Push notifications will be integrated to alert users of new messages or call requests.
 
-- **Message Editing/Deleting**: Users will have the ability to edit or delete messages within a specified timeframe.
+- **Message Editing/Deleting**: Users can edit or delete messages within a specified timeframe.
 
 - **User Authentication Enhancements**: Implement additional authentication methods for enhanced security.
 
